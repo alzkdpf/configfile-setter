@@ -1,10 +1,11 @@
 #!/bin/bash
 user_name=$1
 
-
-
-if [ -z "$user_name" ]; then
-    echo "need argument required for user_name";
+if [ "$1" == "-h" ]; then
+  echo "Usage: `basename $0` [somestuff]"
+  exit 0
+elif [ -z "$user_name" ]; then
+    echo "-h show options";
     exit 0; #exit 0 정상 종료를 의미
 fi
 
