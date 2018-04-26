@@ -24,6 +24,6 @@ if [ -z "$local_file_path" ]; then
     exit 0; #exit 0 정상 종료를 의미
 fi
 
-put=$(printf "put -r %s" $3)
+put=$(printf "mkdir -p %s\nput -r %s" $3 $3)
 
 sftp -oPort=$port $user_name@$host:$remote_path <<< $put
