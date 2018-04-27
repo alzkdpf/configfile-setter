@@ -1,5 +1,5 @@
 #!/bin/bash
-#./upload.sh 2929 configuration 192.168.0.100 configuration /yona/conf $(pwd)/conf/
+#./upload.sh 2929 configuration 192.168.0.100 configuration yo test/
 
 port=$1
 user_name=$2
@@ -26,6 +26,7 @@ if [ -z "$local_file_path" ]; then
     exit 0; #exit 0 정상 종료를 의미
 fi
 save=$(printf "%s.%s" $5 $(date +%F))
+echo $save > result.log
 mkdir=$(printf "mkdir %s" $save)
 put=$(printf "put -r %s %s" $6 $save)
 # put=$(printf "put -r %s" $6)
