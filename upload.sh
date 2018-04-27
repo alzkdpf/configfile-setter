@@ -25,9 +25,9 @@ if [ -z "$local_file_path" ]; then
     echo "need argument required for local_file_path";
     exit 0; #exit 0 정상 종료를 의미
 fi
-
-mkdir=$(printf "mkdir %s" $5)
-put=$(printf "put -r %s %s" $6 $5)
+save=$(printf "%s.%s" $5 $(date +%F))
+mkdir=$(printf "mkdir %s" $save)
+put=$(printf "put -r %s %s" $6 $save)
 # put=$(printf "put -r %s" $6)
 sftp -oPort=$port $user_name@$host:$remote_path <<END
 $(printf "ls")
