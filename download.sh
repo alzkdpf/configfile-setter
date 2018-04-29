@@ -1,7 +1,5 @@
 #!/bin/bash
 #./download.sh configuration 127.0.0.1 2929 $(cat result.log) ./
-# ./download.sh configuration 192.168.5.0 2929 configuration/yo.2018-04-28/test
-# ./download.sh configuration 192.168.5.0 2929 configuration/yo.2018-04-28
 
 user_name=$1
 host=$2

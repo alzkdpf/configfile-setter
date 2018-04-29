@@ -1,5 +1,5 @@
 #!/bin/bash
-#./upload.sh 2929 configuration 192.168.0.100 configuration yoz test/
+#./upload.sh 22 account 192.168.0.1 account folderName test/
 
 port=$1
 user_name=$2
