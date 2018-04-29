@@ -32,8 +32,8 @@ echo $(printf "./download.sh %s %s %d %s" $remote_path $host $port $download_pat
 mkdir=$(printf "mkdir %s" $save)
 put=$(printf "put -r %s %s" $6 $save)
 # put=$(printf "put -r %s" $6)
+# $(printf "ls")
 sftp -oPort=$port $user_name@$host:$remote_path <<END
-$(printf "ls")
 $mkdir
 $put
 END
